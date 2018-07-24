@@ -33,11 +33,11 @@ const mutations = {
   },
 
   MOVE: (state, payload) => {
-    state.rows[0][0] = payload
+    Vue.set(state.rows[0], 0, payload)
   },
 
   INCTABLE: (state) => {
-    state.rows[0][0] = state.rows[0][0] + 1
+    Vue.set(state.rows[0], 0, state.rows[0][0] + 1)
   }
 }
 
